@@ -3,23 +3,20 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { toast } from "react-hot-toast";
 
 const Login = () => {
-  const { auth, signIn, loading, setLoading } = useContext(AuthContext);
+  const { login, googleLogin, loading, setLoading } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const googleProvider = new GoogleAuthProvider();
-
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await signIn(email, password);
+      await login(email, password);
       toast.success("Login successful!");
       navigate(from, { replace: true });
     } catch (error) {
@@ -31,11 +28,12 @@ const Login = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      await googleLogin();
       toast.success("Logged in with Google!");
       navigate(from, { replace: true });
     } catch (error) {
       toast.error(error.message);
+      setLoading(false);
     }
   };
 

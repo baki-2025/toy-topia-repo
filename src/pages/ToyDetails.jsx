@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router";
 import { AuthContext } from "../context/AuthProvider";

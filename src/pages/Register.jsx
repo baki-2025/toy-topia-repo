@@ -1,20 +1,17 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthProvider";
-import { GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
 import { toast } from "react-hot-toast";
 import { EyeIcon, EyeOffIcon } from "lucide-react"; // for eye icons
 
 const Register = () => {
-  const { auth, createUser } = useContext(AuthContext);
+  const { register, googleLogin, updateUserProfile, setLoading } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState("");
   const [photoURL, setPhotoURL] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  const googleProvider = new GoogleAuthProvider();
 
   // 🔐 Password validation function
   const validatePassword = (password) => {
@@ -40,27 +37,25 @@ const Register = () => {
     if (!validatePassword(password)) return;
 
     try {
-      const userCredential = await createUser(email, password);
-      await updateProfile(userCredential.user, {
-        displayName: name,
-        photoURL: photoURL,
-      });
+      await register(email, password);
+      await updateUserProfile(name, photoURL);
 
       toast.success("Account created successfully!");
       navigate("/");
     } catch (error) {
       toast.error(error.message);
+      setLoading(false);
     }
   };
 
-  // 🧩 Google Login
   const handleGoogleRegister = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      await googleLogin();
       toast.success("Registered with Google!");
       navigate("/");
     } catch (error) {
       toast.error(error.message);
+      setLoading(false);
     }
   };
 
