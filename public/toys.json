@@ -1,0 +1,74 @@
+[
+ {
+"toyId": 1,
+"toyName": "Lego Classic Bricks",
+"sellerName": "Toys R Us Local",
+"sellerEmail": "contact@toysruslocal.com",
+"price": 49.99,
+"rating": 4.7,
+"availableQuantity": 75,
+"description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
+"pictureURL": "https://i.ibb.co/XXXXX/lego.png",
+"subCategory": "Building Blocks"
+},
+ {
+    "toyId": 2,
+    "toyName": "Wooden Train Set",
+    "sellerName": "HappyKids",
+    "sellerEmail": "info@happykids.com",
+    "price": 35.5,
+    "rating": 4.5,
+    "availableQuantity": 50,
+    "description": "Beautifully handcrafted wooden train set for toddlers.",
+    "pictureURL": "https://i.ibb.co/CHbRRvw/wooden-train.png",
+    "subCategory": "Vehicles"
+  },
+{
+"toyId": 3,
+"toyName": "Plush Teddy Bear",
+"sellerName": "CuddleCorner",
+"sellerEmail": "hello@cuddle.com",
+"price": 19.99,
+"rating": 4.9,
+"availableQuantity": 120,
+"description": "Soft, huggable teddy bear for all ages.",
+"pictureURL": "https://i.ibb.co/XXXXX/teddy.png",
+"subCategory": "Soft Toys"
+},
+{
+"toyId": 4,
+"toyName": "Puzzle 1000 Pieces",
+"sellerName": "BrainyBoxes",
+"sellerEmail": "sales@brainyboxes.com",
+"price": 14.99,
+"rating": 4.2,
+"availableQuantity": 30,
+"description": "Challenging 1000-piece puzzle for family fun.",
+"pictureURL": "https://i.ibb.co/XXXXX/puzzle.png",
+"subCategory": "Puzzles"
+},
+{
+"toyId": 5,
+"toyName": "Remote Control Car",
+"sellerName": "SpeedyToys",
+"sellerEmail": "contact@speedy.com",
+"price": 39.99,
+"rating": 4.4,
+"availableQuantity": 55,
+"description": "Fast remote control car with rechargeable battery.",
+"pictureURL": "https://i.ibb.co/XXXXX/rccar.png",
+"subCategory": "Electronics"
+},
+{
+"toyId": 6,
+"toyName": "Art & Craft Kit",
+"sellerName": "CreativeKids",
+"sellerEmail": "support@creativekids.com",
+"price": 24.5,
+"rating": 4.6,
+"availableQuantity": 90,
+"description": "Complete art kit to spark creativity.",
+"pictureURL": "https://i.ibb.co/XXXXX/artkit.png",
+"subCategory": "Arts & Crafts"
+}
+]
