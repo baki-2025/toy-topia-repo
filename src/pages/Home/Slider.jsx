@@ -22,7 +22,7 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative">
             <img
-              src="https://i.ibb.co/VvPbThR/toy-banner.png"
+              src="https://i.ibb.co.com/ksr0kLXJ/dan-counsell-sd-TL4q-Tynf-M-unsplash.jpg"
               alt="Toy Banner 1"
               className="w-full h-[500px] object-cover"
             />
@@ -37,7 +37,7 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative">
             <img
-              src="https://i.ibb.co/8jg4QqL/toy-banner2.jpg"
+              src="https://i.ibb.co.com/B2hqB4ty/michal-bozek-Rcx-R1a-Lw8-X0-unsplash.jpg"
               alt="Toy Banner 2"
               className="w-full h-[500px] object-cover"
             />
@@ -52,7 +52,7 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative">
             <img
-              src="https://i.ibb.co/6bt1yC2/toy-3.png"
+              src="https://i.ibb.co.com/sdCwNM2X/luis-arias-Iaa-I7-UIv-E-unsplash.jpg"
               alt="Toy Banner 3"
               className="w-full h-[500px] object-cover"
             />
